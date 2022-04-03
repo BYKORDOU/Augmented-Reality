@@ -1,6 +1,6 @@
 # Lesson: Interaction Design
 
-### First and Last Name: Aggeliki Kordou
+### First and Last Name: Αγγελική Κορδού
 ### University Registration Number: dpsd19138
 ### GitHub Personal Profile: [Aggeliki Kordou](https://github.com/BYKORDOU/Augmented-Reality)
 ### Augmented Reality Personal Repository: https://github.com/BYKORDOU/Augmented-Reality
