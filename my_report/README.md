@@ -31,14 +31,18 @@
 # 2nd Deliverable
 
 Για το δεύτερο παραδοτέο ακολούθησα τα παρακάτω βήματα:
-1.έφτιαξα ένα png με το αντίστοιχο pattern και code και τα έβαλα μέσα στον φάκελο assets του marker_base (pattern-card-H.png και pattern-card-H.patt για το frog)
-2.έφτιαξα ένα png με το αντίστοιχο pattern και code και τα έβαλα μέσα στον φάκελο assets του marker_base (pattern-card-O.png και pattern-card-O.patt για το love)
-3.έφτιαξα ένα png με το αντίστοιχο pattern και code και τα έβαλα μέσα στον φάκελο assets του marker_base (pattern-dpsd19138.png και pattern-dpsd19138.patt)
-4.έκανα downolad από το internet ένα animation gif με έναν βάτραχο, το οποίο ονόμασα ¨frog.gif¨ και το έβαλα μέσα στον φάκελο assets του marker_base
-5.έκανα downolad από το internet ένα animation gif με έναν σκίουρο, το οποίο ονόμασα ¨love.gif¨ και το έβαλα μέσα στον φάκελο assets του marker_base
-6.έκανα edit τον κώδικα έτσι ώστε όταν σκανάρεται το marker του dpsd19138 να εμφανίζεται το ονοματεπώνυμό μου και μια φωτογραφία μου, η οποία βρίσκεται στον φάκελο assets του marker_base με το όνομα "me.jpg"
-7.έκανα edit τον κώδικα έτσι ώστε όταν σκανάρεται το marker του H να εμφανίζεται το gif του frog
-8.έκανα edit τον κώδικα έτσι ώστε όταν σκανάρεται το marker του O να εμφανίζεται το gif του love
+1. έφτιαξα ένα png με το αντίστοιχο pattern και code και τα έβαλα μέσα στον φάκελο assets του marker_base (pattern-card-H.png και pattern-card-H.patt για το frog)
+2. έφτιαξα ένα png με το αντίστοιχο pattern και code και τα έβαλα μέσα στον φάκελο assets του marker_base (pattern-card-O.png και pattern-card-O.patt για το love)
+3. έφτιαξα ένα png με το αντίστοιχο pattern και code και τα έβαλα μέσα στον φάκελο assets του marker_base (pattern-dpsd19138.png και pattern-dpsd19138.patt)
+4. έκανα downolad από το internet ένα animation gif με έναν βάτραχο, το οποίο ονόμασα ¨frog.gif¨ και το έβαλα μέσα στον φάκελο assets του marker_base
+5. έκανα downolad από το internet ένα animation gif με έναν σκίουρο, το οποίο ονόμασα ¨love.gif¨ και το έβαλα μέσα στον φάκελο assets του marker_base
+6. έκανα edit τον κώδικα έτσι ώστε όταν σκανάρεται το marker του dpsd19138 να εμφανίζεται το ονοματεπώνυμό μου και μια φωτογραφία μου, η οποία βρίσκεται στον φάκελο assets του marker_base με το όνομα "me.jpg"
+7. έκανα edit τον κώδικα έτσι ώστε όταν σκανάρεται το marker του H να εμφανίζεται το gif του frog
+8. έκανα edit τον κώδικα έτσι ώστε όταν σκανάρεται το marker του O να εμφανίζεται το gif του love
+
+
+
+
 
 
 
