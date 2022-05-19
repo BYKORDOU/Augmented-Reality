@@ -12,89 +12,62 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
 <script src="build/aframe-speech-command-component.js"></script>
 
-<!-- script for measuring distance -->
-<script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+
+<head>
+    <title>Marker_Based</title>
+</head>
 
 
 <body style="margin : 0px; overflow: hidden;">
-    <a-scene
-     vr-mode-ui="enabled: false;"
-     renderer="logarithmicDepthBuffer: true;"
-      embedded
-      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+    <a-scene vr-mode-ui="enabled: false;" 
+             renderer="logarithmicDepthBuffer: true;" 
+             embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
         
-      <a-marker preset="hiro">
-            <a-entity id="box" geometry="primitive: box; width: 0.4; depth: 0.3; height: 0.4" position="0 0 0"
-                      material="color: #4CC3D9"></a-entity>
-            <a-entity id="cylinder" geometry="primitive: cylinder;  height: 0.3; radius: 0.2" position="-0.5 0 0"
-                      material="color: #cdb5f7"></a-entity>
-            <a-entity id="sphere" geometry="primitive: sphere; radius: 0.1" position="0.5 0 0"
-                      material="color:#10e670"></a-entity>
-
-             <a-entity id="annyang" annyang-speech-recognition></a-entity>
-
-        <a-entity id="switch" speech-command__start="command: start; type: attribute; attribute: visible; targetElement: #snow; value: true;"
-                  speech-command__stop="command: stop; type: attribute; attribute: visible; targetElement: #snow;  value: false;">
-        </a-entity>
-        <a-entity id="snow" position="0 6 -15" particle-system="color: #ffffff"></a-entity>
-
-
-        <a-marker preset="pattern" type="pattern" url ="./assets/pattern-dpsd19003.patt">
-            <a-text text="value: Anastasia" rotation="-90 0 0" position="-0.5 -0.5 -0.7" color="#db16c8"></a-text>
-            <a-image src="./assets/anastasia.png" rotation="90 180 0"></a-image>
-            <a-text text="value: Ampa"  rotation="-90 0 0" position="-0.7 0.3 0.6" color="#1be3dc"></a-text>
-        </a-marker>
-
-        
-
         <a-assets>
-            <a-asset-item id="Hydrogen" src="./assets/cube.gltf"></a-asset-item> 
-           </a-assets>
-
-           <a-marker id="patternH" type="pattern" url="./assets/pattern-card-H.patt">
-            <a-image id="cardH" src="assets/card-H.png" rotation="-90 0 0" width: 1.2; height: 1.2;></a-image>
-            <a-entity position="0 1 0" rotation="0 90 0" scale=" 0.2 0.2 0.2"
-            gltf-model="#Hydrogen"
-            animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 360 0 0; loop: true;" 
-            animation-mixer="clip: *; loop: repeat; timeScale: 1.5;">
-
-            </a-entity>
-   
-        </a-marker>
-
-
-        <a-assets>
-            <a-asset-item id="Oxygen" src="./assets/sphere.gltf"></a-asset-item> 
-           </a-assets>
-
-           <a-assets>
-            <a-asset-item id="Water" src="./assets/water.gltf"></a-asset-item> 
-           </a-assets>
-
-           <a-marker id="patternO" type="pattern" url="./assets/pattern-card-O.patt">
-            <a-image id="cardO" src="assets/card-O.png" rotation="-90 0 0" width: 1; height: 1;></a-image>
-
-            <a-entity position="0 1 0" rotation="0 90 0" scale="0.2 0.2 0.2"
-            gltf-model="#Oxygen"
-            animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 0 360; loop: true;" 
-            animation-mixer="clip: *; loop: repeat;">
-            </a-entity>
-
-            <a-image id="cardh2O" src="assets/H2O.png" rotation="-90 0 0" width: 1; height: 1; visible="false"></a-image>
-
-            <a-entity position="0 0 0" rotation="0 90 0"
-            gltf-model="#Water"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" visible="false">
-	
-            </a-entity>
+            <img id="anastasia" src="assets/dpsd19003.png">
+            <img id="hydrogen" src="assets/card-H.png">
+            <img id="oxygen" src="assets/card-O.png">
+            
+        </a-assets>                      
+                                
+                      
         
+        <a-marker preset="hiro">
+
+            <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2;" position="0 0 0" material="color: #4CC3D9"></a-entity>
+            <a-entity id="sphere" geometry="primitive: sphere; radius:0.25" position="0 0.25 -0.5" material="color: #EF2D5E"></a-entity>
+            <a-entity id="cylinder" geometry="primitive: cylinder; height: 0.4; radius:0.1" position="1 0.75 -0.3" material="color: #FFC65D"></a-entity>
+
+            <a-entity id="annyang" annyang-speech-recognition></a-entity>
+            <a-entity position="0 2 -15" particle-system="preset: snow; particleCount: 10000"
+                      visible="false"
+                      speech-command__start="command: start; type: attribute; attribute: visible; value: true;"
+                      speech-command__stop="command: stop; type: attribute; attribute: visible; value: false;">
+            </a-entity>
         </a-marker>
+        
+        
+        <!-- DELIVERABLE 2-->       
+        
+        <!-- DPSD marker component -->
+        <a-marker preset='custom' type='pattern' url='assets/pattern-dpsd19003.patt'>
+            <a-image src="anastasia" width="1" height="1" rotation="90 180 0" position="0 0.2 0"></a-image>         
+            <a-text value="Anastasia Ampa" rotation="-90 0 0" position="0 0.2 0.8" color="black" text="font: monoid; align: center;"></a-text>         
+            
+        </a-marker>
+        
+        o>            
+        </a-marker>
+        
 
-
+        
 
         <a-entity camera></a-entity>
+
     </a-scene>
 </body>
-
 </html>
+
+
