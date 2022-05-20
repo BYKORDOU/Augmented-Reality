@@ -4,28 +4,47 @@
     <!-- we import arjs version without NFT but with marker + location based support -->
     <!--<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>-->
     <script src="build/aframe-ar.js"></script>
-    
+
     <!-- particles system component -->
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-    
+
     <!-- speech command component -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
-    <script src="build/aframe-speech-command-component.js"></script> 
-	
-	
+    <script src="build/aframe-speech-command-component.js"></script>
+
+
     <body style="margin : 0px; overflow: hidden;">
-        <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
-                 arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+        <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+
+    <!deliverable2-->
 		
-		<a-assets>
-            <img id="anastasia" src="assets/dpsd19003.png">
-            <img id="hydrogen" src="assets/card-H.png">
-            <img id="oxygen" src="assets/card-O.png">
-            
-        </a-assets>                      
+    <a-marker-camera type='pattern' url='assets/pattern-dpsd19003.patt'>
+    <a-text value="Anastasia" position="1 0.5 0" ></a-text>
+    <a-text value="Ampa" position="1 1 0"></a-text>
+    <a-image src="assets/anastasia.png" position="0 0.5 0"></a-image>
+    </a-marker-camera>
+		
+        <a-assets>
+		<a-asset-item id="birdanimation" src="assets/birdanimation.gif"></a-asset-item>
+		</a-assets>
+	    <a-marker type='pattern' url='assets/pattern-card-H.patt'>
+    </a-marker>
 
+       <a-assets>
+           <a-asset-item id="froganimation" src="assets/froganimation.gif"></a-asset-item>
+       </a-assets>
 
-       <a-entity id="switch"
+        <a-marker type='pattern' url='assets/pattern-card-O.patt'>
+		
+        </a-marker>     
+ <a-entity camera></a-entity>
+
+    </a-scene>
+<a-entity id="switch"
 		
 			speech-command__start="command: start; type: attribute; attribute: visible; targetElement: snow; value: true;"
             speech-command__stop="command: stop; type: attribute; attribute: visible; value: false;">
@@ -43,33 +62,5 @@
         <a-entity camera></a-entity>
 
     </a-scene>
-
-<!deliverable2-->
-        
-	    
-        <a-marker-camera type='pattern' url='assets/pattern-dpsd19003.patt'>
-	    <a-text value="Ampa" position="-1.5 0 0" ></a-text>
-            <a-text value="Anastasia" position="-1.5 0.5 0" ></a-text>
-	    <a-image src="assets/anastasia.jpg" position="0 0.5 0"></a-image>
-        </a-marker-camera>
-	    
-	    
-        <a-assets>
-		<a-asset-item id="birdanimation" src="assets/birdanimation.gif"></a-asset-item>
-		</a-assets>
-	    <a-marker type='pattern' url='assets/pattern-card-H.patt'>
-    </a-marker>
-
-       <a-assets>
-           <a-asset-item id="froganimation" src="assets/froganimation.gif"></a-asset-item>
-       </a-assets>
-
-        <a-marker type='pattern' url='assets/pattern-card-O.patt'>
-		
-        </a-marker>     
- <a-entity camera></a-entity>
-
-    </a-scene>
-
 	</body>
 </html>
