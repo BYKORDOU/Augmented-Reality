@@ -11,7 +11,10 @@
     <!-- speech command component -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
     <script src="build/aframe-speech-command-component.js"></script>
-
+	
+    <head>
+        <title>Marker_Based</title>
+    </head>
 
     <body style="margin : 0px; overflow: hidden;">
         <a-scene
@@ -19,31 +22,18 @@
     renderer="logarithmicDepthBuffer: true;"
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-
-    <!deliverable2-->
 		
-    <a-marker-camera type='pattern' url='assets/pattern-dpsd19003.patt'>
-    <a-text value="Anastasia" position="1 0.5 0" ></a-text>
-    <a-text value="Ampa" position="1 1 0"></a-text>
-    <a-image src="assets/anastasia.png" position="0 0.5 0"></a-image>
-    </a-marker-camera>
-		
-        <a-assets>
-		<a-asset-item id="birdanimation" src="assets/birdanimation.gif"></a-asset-item>
-		</a-assets>
-	    <a-marker type='pattern' url='assets/pattern-card-H.patt'>
-    </a-marker>
-
-       <a-assets>
-           <a-asset-item id="froganimation" src="assets/froganimation.gif"></a-asset-item>
-       </a-assets>
-
-        <a-marker type='pattern' url='assets/pattern-card-O.patt'>
-		
-        </a-marker>     
- <a-entity camera></a-entity>
-
-    </a-scene>
+		<a-assets>
+            <img id="anastasia" src="assets/dpsd19003.png">
+            <img id="hydrogen" src="assets/card-H.png">
+            <img id="oxygen" src="assets/card-O.png">
+            
+            <video id="Oxygen" autoplay loop="true" src="assets/froganimation.mp4"></video>
+            <video id="Hydrogen" autoplay loop="true" src="assets/birdanimation.gif"></video>
+            <video id="Water" autoplay loop="true" src="assets/garfieldanimation.gif"></video>
+            
+        </a-assets>                      
+                      
 <a-entity id="switch"
 		
 			speech-command__start="command: start; type: attribute; attribute: visible; targetElement: snow; value: true;"
@@ -59,8 +49,29 @@
 	</a-entity>
         </a-marker>
 
-        <a-entity camera></a-entity>
+        
+    <!deliverable2-->
+		
+    <a-marker-camera type='pattern' url='assets/pattern-dpsd19003.patt'>
+    <a-text value="Anastasia" position="1 0.5 0" ></a-text>
+    <a-text value="Ampa" position="1 1 0"></a-text>
+    <a-image src="assets/anastasia.png" position="0 0.5 0"></a-image>
+    </a-marker-camera>
+		
+ <a-marker type='pattern' url='assets/pattern-card-H.patt'>
+        <a-assets>
+		<a-asset-item id="birdanimation" src="assets/birdanimation.gif"></a-asset-item>
+		</a-assets>
+    </a-marker>
+		
+ <a-marker type='pattern' url='assets/pattern-card-O.patt'>	
+       <a-assets>
+           <a-asset-item id="froganimation" src="assets/froganimation.gif"></a-asset-item>
+       </a-assets>
+        </a-marker>  
+		
+ <a-entity camera></a-entity>
 
-    </a-scene>
+    
 	</body>
 </html>
