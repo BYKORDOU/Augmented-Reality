@@ -25,7 +25,7 @@
             <img id="hydrogen" src="assets/card-H.png">
             <img id="oxygen" src="assets/card-O.png">
             
-            <video id="Oxygen" autoplay loop="true" src="assets/froganimation.mp4"></video>
+            <video id="Oxygen" autoplay loop="true" src="assets/froganimation.gif"></video>
             <video id="Hydrogen" autoplay loop="true" src="assets/birdanimation.gif"></video>
             <video id="Water" autoplay loop="true" src="assets/garfieldanimation.gif"></video>
             
@@ -49,23 +49,23 @@
         
     <!deliverable2-->
 		
-    <a-marker-camera type='pattern' url='assets/pattern-dpsd19003.patt'>
+    <a-marker-camera type='pattern' url='assets/pattern-dpsd.patt'>
     <a-text value="Anastasia" position="1 0.5 0" ></a-text>
     <a-text value="Ampa" position="1 1 0"></a-text>
     <a-image src="assets/anastasia.png" position="0 0.5 0"></a-image>
     </a-marker-camera>
 		
- <a-marker type='pattern' url='assets/pattern-card-H.patt'>
-        <a-assets>
-		<a-asset-item id="birdanimation" src="assets/birdanimation.gif"></a-asset-item>
-		</a-assets>
-    </a-marker>
-		
- <a-marker type='pattern' url='assets/pattern-card-O.patt'>	
-       <a-assets>
-           <a-asset-item id="froganimation" src="assets/froganimation.gif"></a-asset-item>
-       </a-assets>
-        </a-marker>  
+  <!-- Hydrogen marker component -->
+        <a-marker preset='custom' type='pattern' url='assets/pattern-card-H.patt'>     
+            <a-image src="#hydrogen" width="1" height="1" rotation="-90 0 0" position="0 0 0"></a-image>          
+            <a-video src="#Hydrogen" width="1" height="1" position="0 0.5 0" rotation="-90 0 0" alpha-test="0.5"></a-video>          
+        </a-marker>
+
+        <!-- Oxygen marker component -->
+        <a-marker preset='custom' type='pattern' url='assets/pattern-card-O.patt'>
+            <a-image src="#oxygen" width="1" height="1" rotation="-90 0 0" position="0 0.2 0"></a-image>
+            <a-video src="#Oxygen" width="1" height="1" position="0 0.5 0" rotation="-90 0 0" material = "shader:standard; color:blue; emissive:red; emissiveIntensity:2"></a-video>            
+        </a-marker>
 		
  <a-entity camera></a-entity>
 
