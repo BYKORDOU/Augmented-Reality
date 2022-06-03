@@ -35,37 +35,49 @@
 
 
  <!-- DELIVERABLE 2--> 
- <a-marker-camera type='pattern' url='assets/pattern-dpsd19138.patt'>              
-           <a-entity rotation="-90 0 0" position="0 0 0" >
-           <a-text value="KORDOU" align="center" position="0 -0.8 0" side="double" ></a-text>
-           <a-text value="AGGELIKI" align="center" position="0 -0.6 0" side="double"></a-text>
-           <a-image src="assets/me.jpg" position="0 0.5 0" side="double" width="1" height="1"></a-image>
-           </a-marker-camera>
+ <a-assets>
+        <a-marker preset="pattern" type="pattern" url="assets/pattern-dpsd19138.patt">
+            <a-text text="value: KORODOU " position="-1.5 0 0" color= "#D73D3F"></a-text>
+            <a-image src="assets/me.jpg"></a-image>
+            <a-text text="value: AGGELIKI" position="-1.5 0.5 0" color= "#F4D35E"></a-text>
+        </a-marker>
+</a-assets>
+  <!--magic-->
+        <a-assets>
+		      <img id="frog" src="assets/pattern-card-H.png" />
+		      <img id="love" src="assets/pattern-card-O.png" />
+	     </a-assets>
 
+       <a-assets>
+           <a-asset-item id="frog" src="assets/frog.gif"></a-asset-item>
+       </a-assets>
 
-         
-           <a-assets>
-           <a-asset-item id="hydro" src="assets/frog.gif"></a-asset-item>
-           </a-assets>
-           <a-marker type='pattern' url='assets/pattern-card-H.patt'>
-           <a-entity gltf-model="#hydro" scale= "0.2 0.2 0.2";></a-entity>
-           </a-marker>
+       <a-assets>
+           <a-asset-item id="love" src="assets/love.gif"></a-asset-item>
+       </a-assets>
 
+        <a-marker type="barcode" value="8" id="frogmarker">
+          <a-image src="assets/pattern-card-O.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
+          <a-entity   position="0 1.5 0"
+                  rotation="0 0 0"
+                  scale="0.3 0.3 0.3"
+                  gltf-model="#ufo"
+                  animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;" >
+          </a-entity>
+        </a-marker>
 
-         
-           <a-assets>
-           <a-asset-item id="oxy" src="assets/love.gif"></a-asset-item>
-           </a-assets>
-           <a-marker type='pattern' url='assets/pattern-card-O.patt'>
-           <a-entity gltf-model="#oxy" scale= "0.5 0.5 0.5";></a-entity>
-           </a-marker>
+        <a-marker type="barcode" value="39" id="lovemarker">
+            <a-image src="assets/pattern-card-H.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
+            <a-entity   position="0 1.5 0"
+                    rotation="0 0 0"
+                    scale="0.3 0.3 0.3"
+                    gltf-model="#wolf"
+                    animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;" >
+            </a-entity>
+        </a-marker>     
             
-            
-     
-            <a-entity camera></a-entity>
-
+    
+        <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
-
- <!-- DELIVERABLE 3-->
