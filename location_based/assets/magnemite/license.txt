@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pisa tower
+* source:	https://sketchfab.com/3d-models/pisa-tower-fccc1f388bdd40d5958f3d88c6de036a
+* author:	silviaas (https://sketchfab.com/silviaas)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pisa tower" (https://sketchfab.com/3d-models/pisa-tower-fccc1f388bdd40d5958f3d88c6de036a) by silviaas (https://sketchfab.com/silviaas) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
