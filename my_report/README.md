@@ -31,6 +31,7 @@
 # 2nd Deliverable
 
 Για το δεύτερο παραδοτέο ακολούθησα τα παρακάτω βήματα:
+
 1. έφτιαξα το marker του dpsd με τη βοήθεια του Microsoft Painting και του site AR.js
 2. έκανα downolad από το internet ένα animation gif με έναν βάτραχο, το οποίο ονόμασα ¨frog.gif¨ και το έβαλα μέσα στον φάκελο assets του marker_based
 3. έκανα downolad από το internet ένα animation gif με έναν σκίουρο, το οποίο ονόμασα ¨love.gif¨ και το έβαλα μέσα στον φάκελο assets του marker_based
@@ -54,15 +55,17 @@
 # 3rd Deliverable 
 
 Για το πρώτο σκέλος του τρίτου παραδοτέου ακολούθησα τα παρακάτω βήματα:
+
 1. έκανα dowload ένα 3D model του Πύργου της Πίζας, σε αρχείο gltf από το Sketchfab 
 2. το έβαλα μέσα στον φάκελο assets/magnemite στο location_based
 3. έφτιαξα τον κώδικα στο index.html, έτσι ώστε όταν όταν ανοίγει το location_based να εμφανίζεται στην κάμερα το 3D model του αξιοθέατου
 
 
 Για το δεύτερο σκέλος του τρίτου παραδοτέου ακολούθησα τα παρακάτω βήματα:
-1. έκανα dowload μια εικόνα του θέατρου Απόλλων σε μορφή png
-2. την έβαλα στον φάκελο assets/magnemite
-3. 
+
+1. έκανα dowload από το internet μια εικόνα του θέατρου Απόλλων σε μορφή png
+2. την έβαλα στον φάκελο assets/magnemite στο location_based
+3. έφτιαξα τον κώδικα στο syros.html, έτσι ώστε όταν ανοίγει το syros.html να εμφανίζεται η εικόνα που έχω επιλέξει
 
 
 
