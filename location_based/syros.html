@@ -14,14 +14,22 @@
     <a-scene vr-mode-ui="enabled: false"
              embedded
              arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+             
+        
+        
+        <a-entity gps-entity-place="latitude: 37.441413; longitude: 24.945276;" src="./assets/magnemite/apollo.jpg" height="1.5" width="1.5" >
+	  <a-text id="text_info" text="Apollo" position="0 0 -90" color= "#F4D35E" scale="7 7 7" </a-text>
+          <a-image gps-entity-place="latitude: 48.722772; longitude: 9.162278;" src="./assets/megnemite/apollo.jpg" height="1.5" width="1.5" </a-image>    
+	</a-entity>
 
-        <a-assets>
-            <a-image src="./assets/magnemite/apollo.jpg">
-        </a-assets>
-        <a-entity id="#apollo" gps-entity-place="latitude:  37.463493; longitude: 24.916088;" > </a-entity>
+        <a-entity gps-entity-place="latitude:48.722772 ; longitude:9.162278 ;" gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" animation-mixer scale="0.15 0.15 0.15"/>
+        
+        
+       
 
         <a-camera id="camera" gps-camera rotation-reader> </a-camera>
-
     </a-scene>
 
 </body>
+
+</html>
